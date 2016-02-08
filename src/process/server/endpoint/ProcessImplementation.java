@@ -30,7 +30,7 @@ public class ProcessImplementation {
 
     /*  Request to add a new user in the list.
         Expected Input: User (Object)
-        Expected Output: Newly created User with the details associated to that user. (String) */
+        Expected Output: Newly created User with the details associated to that user. (Object) */
 
     public static User createUser(User userDetail) throws Exception {
         responseStorage = serviceStorage.request().accept(MediaType.APPLICATION_JSON).post(Entity.json(userDetail));
@@ -42,7 +42,7 @@ public class ProcessImplementation {
 
      /*  Request to edit a user in the list.
         Expected Input: uId (Integer) and User (Object)
-        Expected Output: Edited User with the details associated to that user. (String) */
+        Expected Output: Edited User with the details associated to that user. (Object) */
 
     public static User updateUser(int userId, User userDetail) throws Exception {
         responseStorage = serviceStorage.path(String.valueOf(userId)).request().accept(MediaType.APPLICATION_JSON).put(Entity.json(userDetail));
@@ -64,7 +64,7 @@ public class ProcessImplementation {
        measureType (String)
        MeasureDetails (Object)
        Expected Output:
-       List of newly created measure. (String) */
+       List of newly created measure. (List) */
 
     public static List<HealthMeasureHistory> createUserMeasure(int uId, String measuretype, HealthMeasureHistory healthMeasureHistoryDetails) throws Exception {
         responseStorage = serviceStorage.path(uId + "/" + measuretype).request().accept(MediaType.APPLICATION_JSON).post(Entity.json(healthMeasureHistoryDetails));
@@ -79,7 +79,7 @@ public class ProcessImplementation {
         hmhId (Integer)
         MeasureDetails (Object)
         Expected Output:
-        List of updated measure. (String) */
+        List of updated measure. (List) */
 
     public static List<HealthMeasureHistory> updateUserMeasure(int uId, String measuretype, HealthMeasureHistory healthMeasureHistoryDetails, int hmhId) throws Exception {
         responseStorage = serviceStorage.path(uId + "/" + measuretype + "/" + hmhId).request().accept(MediaType.APPLICATION_JSON).put(Entity.json(healthMeasureHistoryDetails));

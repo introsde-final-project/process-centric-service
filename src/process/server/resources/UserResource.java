@@ -23,7 +23,7 @@ public class UserResource {
 
    /*  Request to add a new user in the list.
         Expected Input: User (Object)
-        Expected Output: Newly created User with the details associated to that user. (String) */
+        Expected Output: Newly created User with the details associated to that user. (Object) */
 
     @POST
     @Produces({MediaType.APPLICATION_JSON})
@@ -42,7 +42,7 @@ public class UserResource {
 
     /*  Request to edit a user in the list.
         Expected Input: uId (Integer) and User (Object)
-        Expected Output: Edited User with the details associated to that user. (String) */
+        Expected Output: Edited User with the details associated to that user. (Object) */
 
     @Path("{uId}")
     @PUT

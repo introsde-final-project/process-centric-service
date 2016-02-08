@@ -29,7 +29,7 @@ public class BusinessLogicImplementation {
     /* Request to obtain all measure details about a measure of a user in the list.
         Expected Input: uId (Integer)
                        measureType (String)
-       Expected Output: List of details of measure types. (String) */
+       Expected Output: List of details of measure types. (List) */
 
     public static List<HealthMeasureHistory> getUserHistory(int uId, String measureType) throws Exception {
         response = service.path(String.valueOf(uId) + "/"  + measureType).request().accept(MediaType.APPLICATION_JSON).get();
@@ -41,7 +41,7 @@ public class BusinessLogicImplementation {
         Expected Input: uId (Integer)
                         measureType (String)
                         hmhId (Integer)
-        Expected Output: Details of a particular measure. (String) */
+        Expected Output: Details of a particular measure. (List) */
 
     public static List<HealthMeasureHistory> getUserMeasure(int uId, String measureType, int hmhId) throws Exception {
         response = service.path(String.valueOf(uId) + "/"  + measureType + "/" + String.valueOf(hmhId)).request().accept(MediaType.APPLICATION_JSON).get();
