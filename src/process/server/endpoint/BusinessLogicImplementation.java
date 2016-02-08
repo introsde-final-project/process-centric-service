@@ -23,7 +23,7 @@ public class BusinessLogicImplementation {
     private static Response response;
 
     private static URI getBaseURI() {
-        return UriBuilder.fromUri("http://127.0.1.1:8003/business/user").build();
+        return UriBuilder.fromUri("http://127.0.1.1:8004/storage/user").build();
     }
 
     /* Request to obtain all measure details about a measure of a user in the list.

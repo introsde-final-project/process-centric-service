@@ -22,15 +22,10 @@ public class ProcessImplementation {
     private static ClientConfig clientConfig = new ClientConfig();
     private static Client client = ClientBuilder.newClient(clientConfig);
     private static WebTarget serviceStorage = client.target(getStorageServiceURI());
-    private static WebTarget serviceBusiness = client.target(getBusinessServiceURI());
     private static Response responseStorage;
-    private static Response responseBusiness;
 
     private static URI getStorageServiceURI() {
         return UriBuilder.fromUri("http://127.0.1.1:8004/storage/user").build();
-    }
-    private static URI getBusinessServiceURI() {
-        return UriBuilder.fromUri("http://127.0.1.1:8003/business/user").build();
     }
 
     /*  Request to add a new user in the list.
