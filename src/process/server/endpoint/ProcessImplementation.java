@@ -25,7 +25,7 @@ public class ProcessImplementation {
     private static Response responseStorage;
 
     private static URI getStorageServiceURI() {
-        return UriBuilder.fromUri("http://127.0.1.1:8004/storage/user").build();
+        return UriBuilder.fromUri("http://storage-service.herokuapp.com/storage/user").build();
     }
 
     /*  Request to add a new user in the list.

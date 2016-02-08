@@ -1,0 +1,12 @@
+{
+  "name": "Process Centric Service",
+  "description": "Process Centric Service",
+  "repository": "https://git.heroku.com/process-centric-service.git",
+  "env": {
+    "BUILDPACK_URL": "https://github.com/IntroSDE/heroku-buildpack-ant.git",
+    "HEROKU_URL": {
+      "description": "The URL of this Heroku app.",
+      "value": "https://process-centric-service.herokuapp.com"
+    }
+  } 
+}
